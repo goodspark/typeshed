@@ -62,7 +62,7 @@ _Hook: TypeAlias = Callable[[Response], Any]
 _HooksInput: TypeAlias = Mapping[str, Iterable[_Hook] | _Hook]
 
 _ParamsMappingKeyType: TypeAlias = str | bytes | int | float
-_ParamsMappingValueType: TypeAlias = str | bytes | int | float | Iterable[str | bytes | int | float] | None
+_ParamsMappingValueType: TypeAlias = str | bytes | int | float | bool | Iterable[str | bytes | int | float | bool] | None
 _Params: TypeAlias = Union[
     SupportsItems[_ParamsMappingKeyType, _ParamsMappingValueType],
     tuple[_ParamsMappingKeyType, _ParamsMappingValueType],
